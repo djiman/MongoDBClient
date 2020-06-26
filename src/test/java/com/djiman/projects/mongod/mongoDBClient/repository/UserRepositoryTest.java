@@ -52,4 +52,11 @@ class UserRepositoryTest {
       assertEquals("Ndong", user.get().getNom());
     }
 
+    @Test
+    public void testFindUserByNom() {
+        Optional<User> user = userRepository.findUserByNom("Diouf");
+        assertEquals(2, user.get().getId());
+        assertEquals("Ndeye Fatou", user.get().getPrenom());
+    }
+
 }

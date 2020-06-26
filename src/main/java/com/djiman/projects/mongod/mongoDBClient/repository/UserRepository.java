@@ -1,4 +1,4 @@
-package com.djiman.projects.mongod.repository;
+package com.djiman.projects.mongod.mongoDBClient.repository;
 
 import com.djiman.projects.mongod.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;

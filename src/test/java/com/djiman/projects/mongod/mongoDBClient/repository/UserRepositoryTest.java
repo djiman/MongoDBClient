@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,13 +31,13 @@ class UserRepositoryTest {
         user1.setId(1);
         user1.setNom("Ndong");
         user1.setPrenom("Gorgui Djiré");
-        userRepository.insert(user1);
 
         User user2 = new User();
         user2.setId(2);
         user2.setNom("Diouf");
         user2.setPrenom("Ndeye Fatou");
-        userRepository.insert(user2);
+
+        userRepository.insert(Arrays.asList(user1,user2));
     }
 
     @Test
